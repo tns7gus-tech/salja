@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SALJA | Stay Alive, Laugh A Little, Keep Going</title>
+  <meta name="description" content="SALJA는 밈 스타일 캡션, 위로 문장, 짧은 시, 명언 의역, 오늘의 작은 행동을 한 번에 전하는 글로벌 감정 회복 에이전트입니다.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="header" aria-label="Top navigation">
+    <div class="wrap header-row">
+      <div class="logo">SALJA</div>
+      <div class="header-actions">
+        <div class="lang">
+          <button id="langToggle" aria-haspopup="menu" aria-expanded="false">Language</button>
+          <div id="langMenu" class="lang-menu" role="menu" aria-label="Language menu">
+            <button class="lang-item" role="menuitemradio" data-lang="ko">한국어</button>
+            <button class="lang-item" role="menuitemradio" data-lang="en">English</button>
+            <button class="lang-item" role="menuitemradio" data-lang="ja">日本語</button>
+            <button class="lang-item" role="menuitemradio" data-lang="es">Español</button>
+          </div>
+        </div>
+        <button id="quickGenerate" class="btn-primary">Get SALJA</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1 class="ticker">SALJA</h1>
+      <p id="heroCopy" class="hero-copy">죽지 말고, 살자. 오늘 하루만 같이 버티자.</p>
+      <div class="hero-cta">
+        <button id="generateBtn" class="btn-primary">오늘의 SALJA 받기</button>
+        <button id="rerollBtn">다시 받기</button>
+      </div>
+    </section>
+
+    <section class="card" aria-label="SALJA live card">
+      <span id="tickerBadge" class="badge">Ticker: SALJA</span>
+      <div class="rows">
+        <article class="row">
+          <div id="k1" class="k">웃긴 캡션 (밈 스타일)</div>
+          <p id="v1" class="v"></p>
+        </article>
+        <article class="row">
+          <div id="k2" class="k">위로 문장</div>
+          <p id="v2" class="v"></p>
+        </article>
+        <article class="row">
+          <div id="k3" class="k">짧은 시</div>
+          <p id="v3" class="v"></p>
+        </article>
+        <article class="row">
+          <div id="k4" class="k">명언 의역</div>
+          <p id="v4" class="v"></p>
+        </article>
+        <article class="row">
+          <div id="k5" class="k">오늘의 작은 행동</div>
+          <p id="v5" class="v"></p>
+        </article>
+      </div>
+      <div class="card-actions">
+        <button id="saveBtn">문장 저장</button>
+        <button id="shareBtn">공유 문구 복사</button>
+      </div>
+      <p id="status" class="status" aria-live="polite"></p>
+    </section>
+
+    <section class="section grid-2">
+      <article class="panel">
+        <h2 id="whyTitle">WHY SALJA</h2>
+        <p id="why1">비교 피로와 무기력의 루프에서 잠시 벗어날 수 있도록, 30초 안에 읽히는 위로를 제공합니다.</p>
+        <p id="why2">밈 감성으로 마음의 문턱을 낮추고, 짧은 시와 행동 한 가지로 오늘을 버틸 에너지를 돕습니다.</p>
+      </article>
+      <article class="panel">
+        <h2 id="safeTitle">SAFETY</h2>
+        <p id="safe1">이 서비스는 의료·진단·치료를 대체하지 않습니다.</p>
+        <p id="safe2" class="danger-note">즉시 위험하다고 느껴지면 지역 긴급 전화와 신뢰 가능한 위기지원 기관에 바로 연락하세요.</p>
+        <div class="resources">
+          <h3 id="resourceTitle">도움 리소스</h3>
+          <ul id="resourceList"></ul>
+        </div>
+      </article>
+    </section>
+
+    <p id="footerText" class="footer">© SALJA. Keep going, one day at a time.</p>
+  </main>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
